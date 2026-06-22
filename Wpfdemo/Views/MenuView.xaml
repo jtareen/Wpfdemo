@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="Wpfdemo.Views.MenuView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Grid>
+        <StackPanel Width="260"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+
+            <TextBlock Text="Menu"
+                       FontSize="28"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,25"/>
+
+            <Button Content="Products"
+                    Height="45"
+                    Margin="0,0,0,10"
+                    Command="{Binding OpenProductsCommand}"/>
+
+            <Button Content="Page Two"
+                    Height="45"
+                    Margin="0,0,0,10"
+                    Command="{Binding OpenPageTwoCommand}"/>
+
+            <Button Content="Page Three"
+                    Height="45"
+                    Command="{Binding OpenPageThreeCommand}"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
