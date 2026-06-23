@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Wpfdemo.Views
 {
     /// <summary>
-    /// Interaction logic for EmptyPageView.xaml
+    /// Interaction logic for CartView.xaml
     /// </summary>
-    public partial class EmptyPageView : UserControl
+    public partial class CartView : UserControl
     {
-        public EmptyPageView()
+        public CartView()
         {
             InitializeComponent();
         }

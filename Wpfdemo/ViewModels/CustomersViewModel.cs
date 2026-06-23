@@ -4,13 +4,13 @@ using Wpfdemo.Commands;
 
 namespace Wpfdemo.ViewModels;
 
-public class EmptyPageViewModel : ViewModelBase
+public class CustomersViewModel : ViewModelBase
 {
     public string Title { get; }
 
     public ICommand BackCommand { get; }
 
-    public EmptyPageViewModel(string title, Action goHome)
+    public CustomersViewModel(string title, Action goHome)
     {
         Title = title;
         BackCommand = new RelayCommand(_ => goHome());
