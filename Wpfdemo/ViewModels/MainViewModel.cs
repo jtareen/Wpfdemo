@@ -34,8 +34,8 @@ public class MainViewModel : ViewModelBase
     public ICommand OpenMenuCommand { get; }
     public ICommand CloseMenuCommand { get; }
     public ICommand OpenProductsCommand { get; }
-    public ICommand OpenPageTwoCommand { get; }
-    public ICommand OpenPageThreeCommand { get; }
+    public ICommand OpenCartCommand { get; }
+    public ICommand OpenCustomersCommand { get; }
 
     public MainViewModel(ProductService productService)
     {
@@ -45,8 +45,8 @@ public class MainViewModel : ViewModelBase
         CloseMenuCommand = new RelayCommand(_ => IsMenuOpen = false);
 
         OpenProductsCommand = new AsyncRelayCommand(_ => ShowProductsAsync());
-        OpenPageTwoCommand = new RelayCommand(_ => ShowPageTwo());
-        OpenPageThreeCommand = new RelayCommand(_ => ShowPageThree());
+        OpenCartCommand = new RelayCommand(_ => ShowCart());
+        OpenCustomersCommand = new RelayCommand(_ => ShowCustomers());
 
         ShowHome();
     }
@@ -68,15 +68,15 @@ public class MainViewModel : ViewModelBase
         CurrentViewModel = productsViewModel;
     }
 
-    private void ShowPageTwo()
+    private void ShowCart()
     {
         IsMenuOpen = false;
-        CurrentViewModel = new EmptyPageViewModel("Page Two", ShowHome);
+        CurrentViewModel = new CartViewModel("Cart", ShowHome);
     }
 
-    private void ShowPageThree()
+    private void ShowCustomers()
     {
         IsMenuOpen = false;
-        CurrentViewModel = new EmptyPageViewModel("Page Three", ShowHome);
+        CurrentViewModel = new CustomersViewModel("Customers", ShowHome);
     }
 }

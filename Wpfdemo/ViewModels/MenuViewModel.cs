@@ -9,9 +9,9 @@ public class MenuViewModel : ViewModelBase
 {
     public ICommand OpenProductsCommand { get; }
 
-    public ICommand OpenPageTwoCommand { get; }
+    public ICommand OpenCartCommand { get; }
 
-    public ICommand OpenPageThreeCommand { get; }
+    public ICommand OpenCustomersCommand { get; }
 
     public MenuViewModel(
         Func<Task> openProducts,
@@ -19,7 +19,7 @@ public class MenuViewModel : ViewModelBase
         Action openPageThree)
     {
         OpenProductsCommand = new AsyncRelayCommand(_ => openProducts());
-        OpenPageTwoCommand = new RelayCommand(_ => openPageTwo());
-        OpenPageThreeCommand = new RelayCommand(_ => openPageThree());
+        OpenCartCommand = new RelayCommand(_ => openPageTwo());
+        OpenCustomersCommand = new RelayCommand(_ => openPageThree());
     }
 }

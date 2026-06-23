@@ -15,8 +15,12 @@
             <views:ProductsView/>
         </DataTemplate>
 
-        <DataTemplate DataType="{x:Type vm:EmptyPageViewModel}">
-            <views:EmptyPageView/>
+        <DataTemplate DataType="{x:Type vm:CartViewModel}">
+            <views:CartView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type vm:CustomersViewModel}">
+            <views:CustomersView/>
         </DataTemplate>
 
     </Application.Resources>
