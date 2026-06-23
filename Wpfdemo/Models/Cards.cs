@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Wpfdemo.Models
 {
-    internal class cards
+    internal class Cards
     {
         public int Id { get; set; }
 
